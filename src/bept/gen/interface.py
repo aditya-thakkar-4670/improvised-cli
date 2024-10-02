@@ -1520,19 +1520,19 @@ class Output_options(Static):
             with Collapsible(title="FORMAT TO WRITE DATA:"):
                 with RadioSet(id="format"):
                     yield RadioButton(
-                        "OpenDX", id="dx", value=(self.write_pot[0] == "dx")
+                        "OpenDX", id="dx", value=(self.format[0] == "dx")
                     )
                     yield RadioButton(
                         "AVS UCD",
                         id="avs",
                         disabled=(selected_input != "fe-manual"),
-                        value=(self.write_pot[0] == "avs"),
+                        value=(self.format[0] == "avs"),
                     )
                     yield RadioButton(
                         "UBHD",
                         id="uhbd",
                         disabled=(selected_input == "fe-manual"),
-                        value=(self.write_pot[0] == "uhbd"),
+                        value=(self.format[0] == "uhbd"),
                     )
 
 
